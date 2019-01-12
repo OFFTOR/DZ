@@ -3,29 +3,53 @@ import logo from './logo.svg';
 import './App.css';
 
 import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+import Header from './components/Header'
+import Menu from './components/Menu'
+import Main from './components/Main'
+
+const url = process.env.PUBLIC_URL+'/img/bg.jpg';
+const HeaderWrapper = styled.header`
+      width:100%;
+      height:49px;
+      background-color:#242424;
+      opacity: 0.8;
+`
+const MenuWrapper = styled.div`
+      height:89px;
+      paddint-top:20px;
+
+`
+const MainWrapper = styled.main`
+      height:562px;
+      padding-top:130px;
+      background : url(${url}) no-repeat;
+      background-size:cover;
+`
 
 class App extends Component {
   render() {
     return (
-          //     <div className="Wrapper">
-          //          <SayAboutMe name = "Pavel" surname = "Yarmolyuk" link="vk.com" />
-          //          <SayAboutMe name = "Ann" surname = "IDK" link="vk.com" />
-          //          <SayAboutMe name = "Stas" surname = "Yaroshyk" link="vk.com" />
-          //     </div>
-          <h1>Hello World!</h1>     
+          <div className="App">
+              <HeaderWrapper>  
+                <Grid>
+                    <Header />
+                </Grid>
+              </HeaderWrapper>    
+              <MenuWrapper>
+                <Grid>
+                  <Menu />
+                  
+                </Grid>
+              </MenuWrapper>
+              <MainWrapper>  
+                <Grid>
+                  <Main /> 
+                </Grid>
+              </MainWrapper>        
+          </div> 
       );
   }
 }
-
-//function SayAboutMe(props){
-//  return(
-//    <div>
-//      <h1> Моё имя - {props.name}. Фамилия - {props.surname}</h1>
-//      <a href={props.link}> Ссылка на мой профиль </a>
-//    </div>
-//    )
-//}
 export default App;
