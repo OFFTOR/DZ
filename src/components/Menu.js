@@ -46,20 +46,20 @@ const CallButton = styled.button`
 	font-weight: 400;
 `
 
-class PhoneNumber extends React.Component{
-	render(){
-		return(
-			<span> {this.props.pn}</span>
-			)
-	}
-} 
-class Adress extends React.Component{
-	render(){
-		return(
-			<span> {this.props.addr}</span>
-			)
-	}
-}
+//class PhoneNumber extends React.Component{
+//	render(){
+//		return(
+//			<span> {this.props.pn}</span>
+//			)
+//	}
+//} 
+//class Adress extends React.Component{
+//	render(){
+//		return(
+//			<span> {this.props.addr}</span>
+//			)
+//	}
+//}
 class Menu extends React.Component {
 	render(){
 		return(
@@ -71,13 +71,13 @@ class Menu extends React.Component {
 				<Col lg={3} lgOffset={1}>
 					<WorkTime>
 						Пн-пт с 10 до 20, сб,вс с 11 до 18
-						<Adress addr="Ленинская, 301"/>
+						 <span>Ленинская, 301</span>
 					</WorkTime>
 				</Col>
 				<Col lg={3} >
 					<Calls>
 						Звонки принимаются 24 часа
-						<PhoneNumber pn="8 (846) 922 55 44 "/>
+						<span>8 (846) 922 55 44</span>
 					</Calls>
 				</Col>
 				<Col lg={2} >
